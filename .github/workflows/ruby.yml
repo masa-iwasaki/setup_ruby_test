@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     
     - name: Set up Ruby
-      uses: masa-iwasaki/setup-ruby@be1f4093
+      uses: masa-iwasaki/setup-ruby@f45b16eac6b4b027a0c091dfdfb66c159a829d94
 
     - name: Run 'bundle install'
       run: |
