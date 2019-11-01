@@ -1,0 +1,15 @@
+name: ruby-setup
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Set up Ruby
+      uses: masa-iwasaki/setup-ruby@support_ruby_version
+    
