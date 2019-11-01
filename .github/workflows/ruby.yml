@@ -12,4 +12,8 @@ jobs:
     
     - name: Set up Ruby
       uses: masa-iwasaki/setup-ruby@support_ruby_version
+
+    - name: Run 'bundle install'
+      run: |
+        bundle install
     
