@@ -12,6 +12,8 @@ jobs:
     
     - name: Set up Ruby
       uses: masa-iwasaki/setup-ruby@e1a9bd158e61100e5d4e2e0fcd8468895d087b39
+      with:
+        version: 2.5.x
 
     - name: Run 'bundle install'
       run: |
@@ -19,7 +21,7 @@ jobs:
     
     - name: Remove .ruby_versoin
       run: |
-        rm .ruby_version
+        echo "2.5.7" > .ruby_version
 
     - name: Set up Ruby without .ruby_version
       uses: masa-iwasaki/setup-ruby@e1a9bd158e61100e5d4e2e0fcd8468895d087b39
