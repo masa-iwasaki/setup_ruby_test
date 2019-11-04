@@ -10,23 +10,15 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
-    - name: Set up Ruby
-      uses: masa-iwasaki/setup-ruby@e1a9bd158e61100e5d4e2e0fcd8468895d087b39
+    - name: Set up Ruby with "version" parameter
+      uses: masa-iwasaki/setup-ruby@724667021bf41f7cfc303e935f4b1e81ab6b76dd
       with:
         version: 2.5.x
 
-    - name: Run 'bundle install'
+    - name: Remove .ruby-versoin
       run: |
-        bundle install
-    
-    - name: Remove .ruby_versoin
-      run: |
-        echo "2.5.7" > .ruby_version
+        echo "2.6.4" > .ruby-version
 
-    - name: Set up Ruby without .ruby_version
-      uses: masa-iwasaki/setup-ruby@e1a9bd158e61100e5d4e2e0fcd8468895d087b39
-
-    - name: Run 'bundle install' again
-      run: |
-        bundle install
+    - name: Set up Ruby with .ruby-version
+      uses: masa-iwasaki/setup-ruby@724667021bf41f7cfc303e935f4b1e81ab6b76dd
     
